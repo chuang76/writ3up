@@ -2,13 +2,13 @@
 
 List the file in the current directory. There is a SUID program called `babyshell_level1_teaching1` and its owner is root. So we can exploit it to leak the contents of flag. 
 
-[babyshell-1]
+![](https://github.com/chuang76/writ3up/blob/main/figure/babyshell-1.PNG?raw=true)
 
 According to the hint: the standard input will be read into memory at 0x17011000 and executed. So our goal is to write a shellcode and send it as a standard input. 
 
-[babyshell-2]
+![](https://github.com/chuang76/writ3up/blob/main/figure/babyshell-2.PNG?raw=true)
 
-[babyshell-3]
+![](https://github.com/chuang76/writ3up/blob/main/figure/babyshell-3.PNG?raw=true)
 
 Write the shellcode program in `/tmp` directory. The program aims to invoke setuid(0) and execve("/bin/sh").
 
@@ -38,10 +38,10 @@ $ gcc -nostdlib -static shellcode.s -o shellcode
 $ objcopy --dump-section .text=shellcode-raw shellcode
 ```
 
-So we can get the flag. 
+So here is the flag. 
 
 ```
 $ (cat ./tmp/shellcode-raw; cat) | ./babyshell_level1_teaching1
 ```
 
-[babyshell-4]
+![](https://github.com/chuang76/writ3up/blob/main/figure/babyshell-4.PNG?raw=true)

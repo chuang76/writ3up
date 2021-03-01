@@ -26,6 +26,7 @@ My write-ups and notes about computer security.
 | nebula (level 8)     | exploit exercise          | TCP, packet analysis                      | [link](https://chuang76.github.io/posts/nebula_p3/)          |
 | nebula (level 10)    | exploit exercise          | TOCTOU, race condition vulnerability      | [link](https://chuang76.github.io/posts/nebula_p4/)          |
 | babysuid             | pwn.college               | abusing Linux SUID                        | [link](https://github.com/chuang76/writ3up/blob/main/pwn-college/babysuid.md) |
+| babyshell            | pwn.college               | shellcode injection                       | [link](https://github.com/chuang76/writ3up/blob/main/pwn-college/babyshell.md) |
 
 
 
