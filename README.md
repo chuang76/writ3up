@@ -31,11 +31,11 @@ My write-ups and notes about computer security.
 
 ## Technical note
 
-| title                       | note                                                       |
-| --------------------------- | ---------------------------------------------------------- |
-| Lazy Binding                | [link](https://chuang76.github.io/posts/lazy_binding/)     |
-| Users and Groups            | [link](https://chuang76.github.io/posts/users_and_groups/) |
-| Stack Buffer Overflow       | [link](https://chuang76.github.io/posts/bof/)              |
-| Return-to-libc Attack       | [link](https://chuang76.github.io/posts/return-to-libc/)   |
-| Return-Oriented Programming | [link](https://chuang76.github.io/posts/rop/)              |
+| title                       | date    | note                                                       |
+| --------------------------- | ------- | ---------------------------------------------------------- |
+| Lazy Binding                | 2020/12 | [link](https://chuang76.github.io/posts/lazy_binding/)     |
+| Users and Groups            | 2020/12 | [link](https://chuang76.github.io/posts/users_and_groups/) |
+| Stack Buffer Overflow       | 2021/01 | [link](https://chuang76.github.io/posts/bof/)              |
+| Return-to-libc Attack       | 2021/02 | [link](https://chuang76.github.io/posts/return-to-libc/)   |
+| Return-Oriented Programming | 2021/02 | [link](https://chuang76.github.io/posts/rop/)              |
 
