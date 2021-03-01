@@ -1,5 +1,5 @@
 # writ3up
-My write-ups and articles about computer security.
+My write-ups and notes about computer security.
 
 
 
@@ -7,10 +7,10 @@ My write-ups and articles about computer security.
 
 | problem              | source                    | keyword                                   | writeup                                                      |
 | -------------------- | ------------------------- | ----------------------------------------- | ------------------------------------------------------------ |
-| fd                   | pwnable.kr                | file descriptor                           | [link](https://github.com/chuang76/Security-101/blob/master/07-pwnable-kr/fd.md) |
-| collision            | pwnable.kr                | MD5                                       | [link](https://github.com/chuang76/Security-101/blob/master/07-pwnable-kr/collision.md) |
-| bof                  | pwnable.kr                | buffer overflow                           | [link](https://github.com/chuang76/Security-101/blob/master/07-pwnable-kr/bof.md) |
-| flag                 | pwnable.kr                | UPX packer                                | [link](https://github.com/chuang76/Security-101/blob/master/07-pwnable-kr/flag.md) |
+| fd                   | pwnable.kr                | file descriptor                           | [link](https://github.com/chuang76/writ3up/blob/main/pwnable-kr/fd.md) |
+| collision            | pwnable.kr                | MD5                                       | [link](https://github.com/chuang76/writ3up/blob/main/pwnable-kr/collision.md) |
+| bof                  | pwnable.kr                | buffer overflow                           | [link](https://github.com/chuang76/writ3up/blob/main/pwnable-kr/bof.md) |
+| flag                 | pwnable.kr                | UPX packer                                | [link](https://github.com/chuang76/writ3up/blob/main/pwnable-kr/flag.md) |
 | passcode             | pwnable.kr                | GOT                                       | [link](https://chuang76.github.io/posts/passcode/)           |
 | input                | pwnable.kr                | execve, pipe, I/O redirection, socket     | [link](https://chuang76.github.io/posts/input/)              |
 | leg                  | pwnable.kr                | ARM instruction set                       | [link](https://chuang76.github.io/posts/leg/)                |
@@ -25,14 +25,17 @@ My write-ups and articles about computer security.
 | nebula (level 7)     | exploit exercise          | CGI module, thttpd web server             | [link](https://chuang76.github.io/posts/nebula_p3/)          |
 | nebula (level 8)     | exploit exercise          | TCP, packet analysis                      | [link](https://chuang76.github.io/posts/nebula_p3/)          |
 | nebula (level 10)    | exploit exercise          | TOCTOU, race condition vulnerability      | [link](https://chuang76.github.io/posts/nebula_p4/)          |
+| babysuid             | pwn.college               | abusing Linux SUID                        |                                                              |
 
 
 
-## Technical article
+## Technical note
 
-- Lazy Binding 
-- Users and Groups
-- Stack Buffer Overflow
-- Return-to-libc Attack
-- Return-Oriented Programming 
+| title                       | note                                                       |
+| --------------------------- | ---------------------------------------------------------- |
+| Lazy Binding                | [link](https://chuang76.github.io/posts/lazy_binding/)     |
+| Users and Groups            | [link](https://chuang76.github.io/posts/users_and_groups/) |
+| Stack Buffer Overflow       | [link](https://chuang76.github.io/posts/bof/)              |
+| Return-to-libc Attack       | [link](https://chuang76.github.io/posts/return-to-libc/)   |
+| Return-Oriented Programming | [link](https://chuang76.github.io/posts/rop/)              |
 

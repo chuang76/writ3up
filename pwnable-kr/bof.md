@@ -1,4 +1,4 @@
-This is the third challenge in pwnable.kr [1], and it is about buffer overflow. <br>Let's start. First of all, according to the pwnable.kr website, we can obtain the source code `bof.c` and executable file `bof` as follows: 
+This is the third challenge in pwnable.kr, and it is about buffer overflow. <br>Let's start. First of all, according to the pwnable.kr website, we can obtain the source code `bof.c` and executable file `bof` as follows: 
 
 ```
 $ wget http://pwnable.kr/bin/bof.c
