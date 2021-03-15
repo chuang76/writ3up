@@ -7,9 +7,9 @@ Our goal is to control PC register and execute `win()` function. So we need to f
 
 Use radare2 to disassemble the ELF executable. According to the amd64 syscall table, we know that the buffer size (rsi) is 0x30 = 48. So we need to cover 48 + 8 (old rbp) + 8 (return address) = 64 bytes in total. Besides, the address of win() is 0x401d9e. 
 
-[test3]
+![](https://github.com/chuang76/writ3up/blob/main/figure/babymem-L3-test2-3.PNG?raw=true)
 
-[test2]
+![](https://github.com/chuang76/writ3up/blob/main/figure/babymem-L3-test2-2.PNG?raw=true)
 
 So the payload is
 
@@ -23,7 +23,7 @@ proc.sendline(payload)
 proc.read(4096)
 ```
 
-[test1]
+![](https://github.com/chuang76/writ3up/blob/main/figure/babymem-L3-test2-1.PNG?raw=true)
 
 
 
