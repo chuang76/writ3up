@@ -38,7 +38,7 @@ $ gcc -nostdlib -static shellcode.s -o shellcode
 $ objcopy --dump-section .text=shellcode-raw shellcode
 ```
 
-So here is the flag. 
+So we can get the root privilege of the shell and get the flag. 
 
 ```
 $ (cat ./tmp/shellcode-raw; cat) | ./babyshell_level1_teaching1
