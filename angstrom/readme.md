@@ -2,7 +2,7 @@
 
 The file is a 64-bit x84-64 ELF executable. Use Ghidra to analyze the content. I renamed some variable names to make the program more readable. 
 
-[actf-p3-1]
+![](https://github.com/chuang76/writ3up/blob/main/angstrom/actf-p3-1.PNG?raw=true)
 
 In order to get the flag, we need to make
 
@@ -28,7 +28,7 @@ proc.read()
 
 Here is the flag.
 
-[actf-p3]
+![](https://github.com/chuang76/writ3up/blob/main/angstrom/actf-p3.PNG?raw=true)
 
 
 
@@ -36,9 +36,9 @@ Here is the flag.
 
 The file is a 64-bit x84-64 ELF executable. The function `win()` open the file `flag.txt` and read the content for us. So our goal is to force the program execute the `win()` function. The main function calls the function ` vuln()`. However, there is a `gets()` function, which may cause stack overflow, in the `vuln()`. Let's use radare2 to figure out how many bytes should we cover to exploit the stack and control the flow. As you can see, we need to cover 0x40 + 8 (rbp size), and overwrite the return address as 0x401196. So the exploit is as follows. 
 
-[actf-p1-1]
+![](https://github.com/chuang76/writ3up/blob/main/angstrom/actf-p1-1.PNG?raw=true)
 
-[actf-p1-2]
+![](https://github.com/chuang76/writ3up/blob/main/angstrom/actf-p1-2.PNG?raw=true)
 
 ```python
 import pwn 
@@ -49,7 +49,7 @@ proc.sendline(payload)
 proc.read()
 ```
 
-[actf-p1]
+![](https://github.com/chuang76/writ3up/blob/main/angstrom/actf-p1.PNG?raw=true)
 
 
 
@@ -57,15 +57,15 @@ proc.read()
 
 The file is a 64-bit x84-64 ELF executable. Use Ghidra to analyze the content. To bypass the check, we can create a craft stack with the `gets()` function to make the variables equal to their target values. 
 
-[actf-p2-1]
+![](https://github.com/chuang76/writ3up/blob/main/angstrom/actf-p2-1.PNG?raw=true)
 
-[actf-p2-2]
+![](https://github.com/chuang76/writ3up/blob/main/angstrom/actf-p2-2.PNG?raw=true)
 
 So let's use radare2 to figure out the addresses of the variables. As you can see, [rbp-0x60] should be overwritten as "password123", [rbp-0x4] should be overwritten as 0x32, [rbp-0x8] should be overwritten as 0x37, [rbp-0xc] should be overwritten as 0xf5, [rbp-0x10] should be overwritten as 0x3d. 
 
-[actf-p2-3]
+![](https://github.com/chuang76/writ3up/blob/main/angstrom/actf-p2-3.PNG?raw=true)
 
-[actf-p2-4]
+![](https://github.com/chuang76/writ3up/blob/main/angstrom/actf-p2-4.PNG?raw=true)
 
 ```python
 import pwn 
@@ -79,4 +79,4 @@ proc.read()
 
 Here is the flag. 
 
-[actf-p2]
+![](https://github.com/chuang76/writ3up/blob/main/angstrom/actf-p2.PNG?raw=true)
