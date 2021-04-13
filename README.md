@@ -3,7 +3,7 @@ My write-ups and notes about computer security.
 
 
 
-## Write-up
+## Write-up 
 
 | problem              | source                    | keyword                                    | writeup                                                      |
 | -------------------- | ------------------------- | ------------------------------------------ | ------------------------------------------------------------ |
@@ -47,10 +47,11 @@ My write-ups and notes about computer security.
 
 ## Technical note
 
-| title                       | keyword                             | date    | note                                                       |
-| --------------------------- | ----------------------------------- | ------- | ---------------------------------------------------------- |
-| Lazy Binding                | lazy binding, PLT, GOT              | 2020/12 | [link](https://chuang76.github.io/posts/lazy_binding/)     |
-| Users and Groups            | permission, /etc/passwd             | 2020/12 | [link](https://chuang76.github.io/posts/users_and_groups/) |
-| Stack Buffer Overflow       | buffer overflow, shellcode          | 2021/01 | [link](https://chuang76.github.io/posts/bof/)              |
-| Return-to-libc Attack       | ret2libc                            | 2021/02 | [link](https://chuang76.github.io/posts/return-to-libc/)   |
-| Return-Oriented Programming | skip prologue, leave ret, ROP chain | 2021/02 | [link](https://chuang76.github.io/posts/rop/)              |
+| title                                | keyword                                | date    | note                                                       |
+| ------------------------------------ | -------------------------------------- | ------- | ---------------------------------------------------------- |
+| Lazy Binding                         | lazy binding, PLT, GOT                 | 2020/12 | [link](https://chuang76.github.io/posts/lazy_binding/)     |
+| Users and Groups                     | permission, /etc/passwd                | 2020/12 | [link](https://chuang76.github.io/posts/users_and_groups/) |
+| Stack Buffer Overflow                | buffer overflow, shellcode             | 2021/01 | [link](https://chuang76.github.io/posts/bof/)              |
+| Return-to-libc Attack                | ret2libc                               | 2021/02 | [link](https://chuang76.github.io/posts/return-to-libc/)   |
+| Return-Oriented Programming          | skip prologue, leave ret, ROP chain    | 2021/02 | [link](https://chuang76.github.io/posts/rop/)              |
+| Firmware: Breaking Encryption Scheme | AES encryption, file system extraction | 2021/04 | [link](https://hackmd.io/XAvS9IuRTD6-HIiQCaOnQA?view)      |
