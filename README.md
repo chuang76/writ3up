@@ -45,6 +45,7 @@ My write-ups and notes about computer security.
 | Simple calc                    | Boston Key Part’16        | stack buffer overflow, ROP chain                             | [link](https://hackmd.io/ECOMk9XpTeKypPQ9YiNGpw#07-Boston-Key-Part%E2%80%9916-Simple-Calc) |
 | Necromancer: level 1 - level 6 | VulnHub                   | port scan (nmap), hash decryption, web content scanner (dirbuster), wireshark/tshark | [link](https://hackmd.io/BbmvwE7fSJq54no4g3SUQA?view#Flag-1---Flag-6) |
 | Protostar: heap0               | VulnHub                   | heap overflow                                                | [link](https://hackmd.io/ECOMk9XpTeKypPQ9YiNGpw#24-Protostar-heap0) |
+| NullByte                       | VulnHub                   | web, stego (exiftool), SQL injection (sqlmap), crack passwords (hydra), abusing SUID | [link](https://hackmd.io/aOQnJSi2SQmgXCfggWIGQQ?view)        |
 
 
 
